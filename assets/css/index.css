@@ -35,7 +35,7 @@ overflow: hidden;
 .s1-md-bk {
     height: 100vh;
     width: 98.8vw;
-    background-image: url(../assets/imagini/Header/Media_Digitala_Brasov\ \(1\).jpg);
+    background-image: url(/assets/imagini/Header/Media_Digitala_Brasov\ \(1\).jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -47,7 +47,7 @@ overflow: hidden;
 }
 .buton1 {
     position: relative;
-    background-image: url(../assets/imagini/buton1.svg);
+    background-image: url(/assets/imagini/buton1.svg);
     width: 200px;
     height: 200px;
     display: flex;
@@ -107,7 +107,7 @@ z-index: 1;
     width: 100%;
     background-color: black;
     padding: 20px 0px;
-    background-image: url(../assets/imagini/imaginiprimapagina/media\ digitală.jpg);
+    background-image: url(/assets/imagini/imaginiprimapagina/media\ digitală.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -155,7 +155,7 @@ margin: 0 5px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-image: url(../assets/imagini/imaginiprimapagina/media\ digitală-joburi.jpg);
+    background-image: url(/assets/imagini/imaginiprimapagina/media\ digitală-joburi.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -232,7 +232,7 @@ margin: 0 5px;
     justify-content: center;
     min-height: 100vh;
     width: 100%;
-    background-image: url(../assets/imagini/imaginiprimapagina/recenzii.jpg);
+    background-image: url(/assets/imagini/imaginiprimapagina/recenzii.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -301,7 +301,7 @@ position: relative;
 .sectiunea6-md {
     width: 100%;
     min-height: 100vh;
-    background-image: url(../assets/imagini/motive/motive.jpg);
+    background-image: url(/assets/imagini/motive/motive.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -345,7 +345,7 @@ z-index: -99999;
 } 
 .buton2 {
     position: relative;
-    background-image: url(../assets/imagini/motive/buton/inscrietelamediadigitala.png);
+    background-image: url(/assets/imagini/motive/buton/inscrietelamediadigitala.png);
     width: 250px;
     height: 140px;    
     display: flex;
