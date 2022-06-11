@@ -6,18 +6,399 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Animated Nav With GSAP 3.0</title>
-    <link rel="stylesheet" href="media-digitala/assets/css/generalstyle.css">
-    <link rel="stylesheet" href="media-digitala/assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/generalstyle.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="media-digitala/assets/javascript/neon-cursor.js"></script>
+    <script src="./assets/javascript/neon-cursor.js"></script>
+    <style>
+        
+
+.lumina-neon-stanga {
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 0px;
+    -webkit-box-shadow:0px 0px 105px 45px rgba(255,0,221,0.9);
+    -moz-box-shadow: 0px 0px 105px 45px rgba(255,0,221,0.9);
+    box-shadow: 0px 0px 105px 45px rgba(255,0,221,0.9);
+    z-index: 0;
+}
+
+.lumina-neon-dreapta {
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 0px;
+    -webkit-box-shadow:0px 0px 105px 45px rgba(34,141,255,0.9);
+-moz-box-shadow: 0px 0px 105px 45px rgba(34,141,255,0.9);
+box-shadow: 0px 0px 105px 45px rgba(34,141,255,0.9);
+z-index: 0;
+}
+.sectiunea1-md {
+
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+width: 100%;
+background-color: black;
+z-index: 9999;
+overflow: hidden;
+}
+.s1-md-bk {
+    height: 100vh;
+    width: 98.8vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    background-image: url(./assets/imagini/Header/Media_Digitala_Brasov\ \(1\).jpg);
+    
+
+}
+.buton1 {
+    position: relative;
+    
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.buton1:hover {
+    color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+
+}
+
+.sectiunea2-md {
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px 0px;
+    background-color: black;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.flex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.container-efect-sticla {
+max-width: 700px;
+padding: 20px 20px;
+text-align: justify;
+z-index: 1;
+
+}
+.container-efect-sticla h2 {
+    text-align: center;
+}
+
+/*ce vei studia*/
+.sectiunea3-md {
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    padding: 20px 0px;
+    background-image: url(./assets/imagini/imaginiprimapagina/media\ digitală.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.md-rand1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 800px;
+    background: rgba( 255, 255, 255, 0.2 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 7px );
+-webkit-backdrop-filter: blur( 7px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+padding: 15px 10px;
+height: fit-content;
+margin: 0 5px;
+}
+.md-coloane-anul1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width:700px ;
+    color: white;
+}
+.md-rand1-cu-spatiu {
+    margin-top: 20px;
+}
+.md-coloana1 {
+    width: 340px;
+}
+.md-coloana2 {
+    width: 340px;
+}
+/*cvs end*/
+
+/*ce messerie vei avea - start*/
+.sectiunea4-md {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./assets/imagini/imaginiprimapagina/media\ digitală-joburi.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+}
+.rand1-sectiunea4-md {
+    max-width:700px;
+    height: fit-content;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    color: white;
+}
+.subrand1-sectiunea4-md {
+    max-width: 700px;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    
+
+}
+.coloana1-sectiunea4-md {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    
+}
+.img-meserii {
+    width: 250px;
+    height: auto;
+    border-radius: 20px;
+    margin: 10px 20px;
+}
+.subcoloana2-sectiunea4-md img {
+
+  box-shadow: 0px 0px 10px -2px rgb(255, 255, 255);
+  /* in order: x offset, y offset, blur size, spread size, color */
+  /* blur size and spread size are optional (they default to 0) */
+
+}
+.rand1-sectiunea4-md .spatiu {
+    top: 20px;
+}
+.subcoloana1-sectiunea4-md p {
+    text-align: justify ;
+}
+.coloana1-sectiunea4-md-invers {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse !important;
+}
+.subcoloana1-sectiunea4-md-invers {
+    text-align: right;
+}
+.subcoloana1-sectiunea4-md-invers p {
+    text-align: justify;
+}
+.container-salariu p {
+    text-align: center;
+}
+
+/*ce meserie vei avea - end*/
+
+/*recenzie -start*/
+.sectiunea5-md {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(./assets/imagini/imaginiprimapagina/recenzii.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.container-general-flex {
+    max-width:900px;
+    height: fit-content ;
+    display: flex;
+    flex-direction: column;    
+    padding: 10px;
+
+}
+.container-general-flex h2 {
+    text-align: center;
+}
+
+.container-general-flex h2 {
+    padding: 10px 0;
+}
+.container-recenzii {
+    display: flex;
+    flex-direction: row;
+}
+@media (max-width:860px) {
+    .container-recenzii {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.crecenzii-coloana {
+    width: 300px;
+    min-height: 300px ;
+    margin: 10px;
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+padding: 10px 5px;
+position: relative;
+}
+
+.img-recenzii {
+    width: 100px;
+    height: auto;
+}
+.p-recenzii {
+    text-align: center;
+    padding: 10px 20px;
+}
+.p-recenzii-nume {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+/*recenzie - end*/
+
+/*motive - start*/
+.sectiunea6-md {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(./assets/imagini/motive/motive.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.cmotive-rand {
+    top: 10px;
+    text-align: right;
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 500px;
+    min-height: 150px;
+    background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+.cmotive-rand p {
+    padding: 0px 10px;
+}
+.img-motive {
+position: absolute;
+right: -80px;
+top: 25%;
+width: 80px;
+z-index: -99999;
+}
+
+.container-motive div{
+    margin: 10px 0px;
+} 
+.buton2 {
+    position: relative;
+    background-image: url(./assets/imagini/motive/buton/inscrietelamediadigitala.png);
+    width: 250px;
+    height: 140px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background-repeat: no-repeat;
+}
+
+.buton2:hover {
+    color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+
+}
+.container-buton-inscriere {
+    width: 100%;
+
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+/*motive - end*/
+    </style>
 </head>
 
 <body>
     
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark container-navbar123" style="background-color: black !important;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img class="logo-img" src="media-digitala/assets/imagini/Logo-UT-SC-RGB-RO.png" alt="" srcset=""></a>
+          <a class="navbar-brand" href="#"><img class="logo-img" src="./assets/imagini/Logo-UT-SC-RGB-RO.png" alt="" srcset=""></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -56,7 +437,7 @@
             <div id="app">
                 <div class="container-text-header" id="hero">
                     <h1 class="text-headear" >Media Digitală</h1>
-                        <a class="buton1" href="#exploreaza">Explorează</a>
+                        <a class="buton1" href="#exploreaza" style="background-image: url(./assets/imagini/buton1.svg);">Explorează</a>
                 </div>
             </div>
             
@@ -242,7 +623,7 @@
                     </div>
                     
                     <div class="subcoloana2-sectiunea4-md">
-                       <img class="img-meserii" src="media-digitala/assets/imagini/Imaginimeserii/jurnalism.jpg" alt="" srcset="">
+                       <img class="img-meserii" src="./assets/imagini/Imaginimeserii/jurnalism.jpg" alt="" srcset="">
 
                     </div>
                 </div>
@@ -300,7 +681,7 @@
                     </div>
                     
                     <div class="subcoloana2-sectiunea4-md">
-                       <img class="img-meserii" src="media-digitala/assets/imagini/Imaginimeserii/Meserii-Media-Digitala-Brasov (1).jpg" alt="" srcset="">
+                       <img class="img-meserii" src="./assets/imagini/Imaginimeserii/Meserii-Media-Digitala-Brasov (1).jpg" alt="" srcset="">
 
                     </div>
                 </div>
@@ -326,7 +707,7 @@
                     </div>
                     
                     <div class="subcoloana2-sectiunea4-md">
-                       <img class="img-meserii" src="media-digitala/assets/imagini/Imaginimeserii/Meserii-Media-Digitala-Brasov (2).jpg" alt="" srcset="">
+                       <img class="img-meserii" src="./assets/imagini/Imaginimeserii/Meserii-Media-Digitala-Brasov (2).jpg" alt="" srcset="">
 
                     </div>
                 </div>
@@ -352,7 +733,7 @@
                     </div>
                     
                     <div class="subcoloana2-sectiunea4-md">
-                       <img class="img-meserii" src="media-digitala/assets/imagini/Imaginimeserii/Meserii-Media-Digitala-Brasov (3).jpg" alt="" srcset="">
+                       <img class="img-meserii" src="./assets/imagini/Imaginimeserii/Meserii-Media-Digitala-Brasov (3).jpg" alt="" srcset="">
 
                     </div>
                 </div>
@@ -396,7 +777,7 @@
                     </div>
                     
                     <div class="subcoloana2-sectiunea4-md">
-                       <img class="img-meserii" src="media-digitala/assets/imagini/Imaginimeserii/Meserii-Media-Digitala-Brasov (4).jpg" alt="" srcset="">
+                       <img class="img-meserii" src="./assets/imagini/Imaginimeserii/Meserii-Media-Digitala-Brasov (4).jpg" alt="" srcset="">
 
                     </div>
                 </div>
@@ -423,7 +804,7 @@
                     </div>
                     
                     <div class="subcoloana2-sectiunea4-md">
-                       <img class="img-meserii" src="media-digitala/assets/imagini/Imaginimeserii/Meserii-Media-Digitala-Brasov (5).jpg" alt="" srcset="">
+                       <img class="img-meserii" src="./assets/imagini/Imaginimeserii/Meserii-Media-Digitala-Brasov (5).jpg" alt="" srcset="">
 
                     </div>
                 </div>
@@ -447,7 +828,7 @@
                     </div>
                     
                     <div class="subcoloana2-sectiunea4-md">
-                       <img class="img-meserii" src="media-digitala/assets/imagini/Imaginimeserii/Meserii-Media-Digitala-Brasov (6).jpg" alt="" srcset="">
+                       <img class="img-meserii" src="./assets/imagini/Imaginimeserii/Meserii-Media-Digitala-Brasov (6).jpg" alt="" srcset="">
 
                     </div>
                 </div>
@@ -459,7 +840,7 @@
                 <h2>PĂREREA STUDENȚILOR FAȚĂ DE MEDIA DIGITALĂ</h2>
                 <div class="container-recenzii">
                     <div class="crecenzii-coloana">
-                        <img class="img-recenzii" src="media-digitala/assets/imagini/recenzii/Media_Digitală_Recenzii (1).png" alt="" srcset="">
+                        <img class="img-recenzii" src="./assets/imagini/recenzii/Media_Digitală_Recenzii (1).png" alt="" srcset="">
                         <p class="p-recenzii" >
                             Qui pariatur molestiae, explicabo quis atque deleniti excepturi! Rem, illum? Harum tempora numquam adipisci. Nisi necessitatibus sed in quos beatae voluptatibus eius.
                         </p>
@@ -468,7 +849,7 @@
                         </p>
                     </div>
                     <div class="crecenzii-coloana">
-                        <img class="img-recenzii" src="media-digitala/assets/imagini/recenzii/Media_Digitală_Recenzii (2).png" alt="" srcset="">
+                        <img class="img-recenzii" src="./assets/imagini/recenzii/Media_Digitală_Recenzii (2).png" alt="" srcset="">
                         <p class="p-recenzii" >
                             Qui pariatur molestiae, explicabo quis atque deleniti excepturi! Rem, illum? Harum tempora numquam adipisci. Nisi necessitatibus sed in quos beatae voluptatibus eius.
                         </p>
@@ -477,7 +858,7 @@
                         </p>
                     </div>
                     <div class="crecenzii-coloana">
-                        <img class="img-recenzii" src="media-digitala/assets/imagini/recenzii/Media_Digitală_Recenzii (3).png" alt="" srcset="">
+                        <img class="img-recenzii" src="./assets/imagini/recenzii/Media_Digitală_Recenzii (3).png" alt="" srcset="">
                         <p class="p-recenzii" >
                             Qui pariatur molestiae, explicabo quis atque deleniti excepturi! Rem, illum? Harum tempora numquam adipisci. Nisi necessitatibus sed in quos beatae voluptatibus eius.
                         </p>
@@ -493,43 +874,43 @@
                 <h2>DE CE SĂ STUDIEZI MEDIA DIGITALĂ LA UNIVERSITATEA TRANSILVANIA?</h2>
                 <div class="container-motive">
                     <div class="cmotive-rand">
-                        <img class="img-motive" src="media-digitala/assets/imagini/motive/cifre/4.png" alt="">
+                        <img class="img-motive" src="./assets/imagini/motive/cifre/4.png" alt="">
                         <p>
                             Un trend global este creșterea cererii în ceea ce privește conținutul digital, ceea ce înseamnă că exită foarte multe oportunități profesionale.
                         </p>
                     </div>
                     <div class="cmotive-rand cmspatiu">
-                        <img class="img-motive" src="media-digitala/assets/imagini/motive/cifre/5.png" alt="">
+                        <img class="img-motive" src="./assets/imagini/motive/cifre/5.png" alt="">
                         <p>
                             Poți beneficia de mobilități internaționale în cazul în care te interesează această șansă.                        </p>
                     </div>
                     <div class="cmotive-rand cmspatiu">
-                        <img class="img-motive" src="media-digitala/assets/imagini/motive/cifre/6.png" alt="">
+                        <img class="img-motive" src="./assets/imagini/motive/cifre/6.png" alt="">
                         <p>
                             Universitatea te poate răsplăti financiar dacă ai performanțe bune.                        
                         </p>
                     </div>
                     <div class="cmotive-rand cmspatiu">
-                        <img class="img-motive" src="media-digitala/assets/imagini/motive/cifre/7.png" alt="">
+                        <img class="img-motive" src="./assets/imagini/motive/cifre/7.png" alt="">
                         <p>
                             Poți să te bucuri de relațiile Universității și să faci practică sau intership la diferite companii private din Brașov.
                         </p>
                     </div>
                     <div class="cmotive-rand cmspatiu">
-                        <img class="img-motive" src="media-digitala/assets/imagini/motive/cifre/8.png" alt="">
+                        <img class="img-motive" src="./assets/imagini/motive/cifre/8.png" alt="">
                         <p>
                             Brașovul este unul din cele mai frumoase orașe din România în care poți să te relaxezi, explorezi și să te distrezi cu prietenii.
                         </p>
                     </div>
                     <div class="cmotive-rand cmspatiu">
-                        <img class="img-motive" src="media-digitala/assets/imagini/motive/cifre/9.png" alt="">
+                        <img class="img-motive" src="./assets/imagini/motive/cifre/9.png" alt="">
                         <p>
                             Poți participa la diferite evenimente, concursuri naționale, competiții sportive sau concerte organizate de universitate.
                         </p>
                     </div>
                     
                     <div class="cmotive-rand cmspatiu">
-                        <img class="img-motive" src="media-digitala/assets/imagini/motive/cifre/10.png" alt="">
+                        <img class="img-motive" src="./assets/imagini/motive/cifre/10.png" alt="">
                         <p>
                             La sfârșitul anului poți nota profesorii așa cum te notează și ei pe tine. Da! Ai citit bine! Acest lucru îl poți face doar la universitatea Transilvania din Brașov pentru că nu sunt alte universități în România care să aibă un sistem de salarizare care se bazează pe evaluarea făcută de studenți.
                         </p>
@@ -551,7 +932,7 @@
               ↑  
             </p>
         </a>
-<script src="media-digitala/assets/javasript/buton-top.js"></script>
+<script src="./assets/javasript/buton-top.js"></script>
 	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
     <footer class="footer-principal">
         <div class="fcontainer-principal">
@@ -560,7 +941,7 @@
             </div>
             <div class="frand2">
                 <div class="fcoloana1">
-                    <img class="img-footer" src="media-digitala/assets/imagini/footer/Media-Digitală-Universitatea-Transilvania.png" alt="">
+                    <img class="img-footer" src="./assets/imagini/footer/Media-Digitală-Universitatea-Transilvania.png" alt="">
                 </div>
                 <div class="fcoloana1">
                     <ul class="footer-ul">
@@ -580,15 +961,15 @@
                 </div>
             </div> 
             <div class="frand3-social-media">
-                <a href=""> <img src="media-digitala/assets/imagini/social-media/1.png" alt="" srcset=""></a>
-                <a href=""> <img src="media-digitala/assets/imagini/social-media/2.png" alt="" srcset=""></a>
-                <a href=""> <img src="media-digitala/assets/imagini/social-media/3.png" alt="" srcset=""></a>
-                <a href=""> <img src="media-digitala/assets/imagini/social-media/4.png" alt="" srcset=""></a>
+                <a href=""> <img src="./assets/imagini/social-media/1.png" alt="" srcset=""></a>
+                <a href=""> <img src="./assets/imagini/social-media/2.png" alt="" srcset=""></a>
+                <a href=""> <img src="./assets/imagini/social-media/3.png" alt="" srcset=""></a>
+                <a href=""> <img src="./assets/imagini/social-media/4.png" alt="" srcset=""></a>
 
                 
             </div>
         </div>
     </footer>
 </body>
-<script src="media-digitala/assets/javasript/navbarjavascript.js"></script>
+<script src="./assets/javasript/navbarjavascript.js"></script>
 </html>

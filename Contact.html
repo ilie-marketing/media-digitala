@@ -6,19 +6,226 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title>Animated Nav With GSAP 3.0</title>
-    <link rel="stylesheet" href="/assets/css/generalstyle.css">
-    <link rel="stylesheet" href="/assets/css/Contact.css">
+    <link rel="stylesheet" href="./assets/css/generalstyle.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      .lumina-neon-stanga {
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 0px;
+    -webkit-box-shadow:0px 0px 105px 45px rgba(255,0,221,0.9);
+    -moz-box-shadow: 0px 0px 105px 45px rgba(255,0,221,0.9);
+    box-shadow: 0px 0px 105px 45px rgba(255,0,221,0.9);
+    z-index: 0;
+}
 
+.lumina-neon-dreapta {
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 0px;
+    -webkit-box-shadow:0px 0px 105px 45px rgba(34,141,255,0.9);
+-moz-box-shadow: 0px 0px 105px 45px rgba(34,141,255,0.9);
+box-shadow: 0px 0px 105px 45px rgba(34,141,255,0.9);
+z-index: 0;
+}
+.sectiunea1-md {
+
+display: flex;
+justify-content: flex-start;
+align-items: center;
+height: 100vh;
+width: 100%;
+background-color: black;
+z-index: 9999;
+overflow: hidden;
+}
+.container-text-header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.container-text-header .container-gol {
+    width: 350px;
+    height: 200px;
+}
+.s1-md-bk {
+    height: 100vh;
+    width: 98.8vw;
+    background-image: url(./assets/imagini/Header/Media_Digitala_Brasov\ \(2\).jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+   
+    
+
+}
+.buton1 {
+    position: relative;
+    background-image: url(./assets/imagini/buton1.svg);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.buton1:hover {
+    color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+
+}
+
+.sectiunea2-md {
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px 0px;
+    background-color: black;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.flex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.container-efect-sticla {
+    max-width: 700px;
+    padding: 20px 20px;
+    text-align: justify;
+    z-index: 1;
+    
+    }
+    .container-efect-sticla h2 {
+        text-align: center;
+    }
+    
+    /*ce vei studia*/
+    .sectiunea3-md {
+        min-height: 100vh;
+        width: 100%;
+        background-color: black;
+        padding: 20px 0px;
+        background-image: url(./assets/imagini/imaginiprimapagina/media\ digitală.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    /*Formular contact start*/
+    .row .no-gutter {
+        max-width: 1500px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .form-group {
+        padding: 5px 0;
+    }
+    .dbox {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        align-items: baseline;
+        
+    }
+    .icon .align-items-center {
+        height: inherit;
+        display: flex;
+        align-items: baseline;
+    }
+    .icon .fa {
+        margin-right: 10px;
+    }
+    .text .pl-3 {
+        display: flex;
+        align-items: center;
+    }
+    .fa {
+        font-size: 20px !important;
+    }
+    .text a {
+        text-decoration:none ;
+        color: white;
+    }
+    .text a:hover {
+        text-decoration:none ;
+        color: black;
+    }
+    .info-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        padding: 15px;
+        border-radius: 15px;
+        background:-moz-linear-gradient(45deg, rgba(140, 0, 255, .6) 0%, rgba(2, 242, 114, .7) 100%);
+	  background: -webkit-gradient( left bottom, right top, color-stop (0%, rgba(140, 0, 255, .6) ), color-stop(100%, rgba(2, 242, 114, .7) ) );
+	/* background: -webkit-linear-gradient(45deg, rgba(140, 0, 255, .6) 0%, rgba(2, 242, 114, .7) 100%); */
+	background:  -o-linear-gradient(45deg, rgba(140, 0, 255, .6) 0%, rgba(2, 242, 114, .7) 100%);
+	background: -ms-linear-gradient(45deg, rgba(140, 0, 255, .6) 0%, rgba(2, 242, 114, .7) 100%);
+	background:     linear-gradient(45deg, rgba(140, 0, 255, .6) 0%, rgba(2, 242, 114, .7) 100%);
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c00ff', endColorstr='#02f272', GradientType=1);*/
+	z-index: 100;
+	-webkit-transform: translate3d(0, 0, 0);
+
+    }
+    .btn1 {
+        padding: 5px 15px;
+        border-radius: 10px;
+        border: none;
+        background:-moz-linear-gradient(45deg, rgb(140, 0, 255) 0%, rgba(2, 242, 114, 0.438) 100%);
+	background:    -webkit-gradient( left bottom, right top, color-stop (0%, rgb(140, 0, 255) ), color-stop(100%, rgba(2, 242, 114, 0.425) ) );
+	/* background: -webkit-linear-gradient(45deg, rgba(140, 0, 255, .6) 0%, rgba(2, 242, 114, .7) 100%); */
+	background:  -o-linear-gradient(45deg, rgb(140, 0, 255) 0%, rgba(2, 242, 114, 0.356) 100%);
+	background: -ms-linear-gradient(45deg, rgb(140, 0, 255) 0%, rgba(2, 242, 114, 0.384) 100%);
+	background:     linear-gradient(45deg, rgb(140, 0, 255) 0%, rgba(2, 242, 114, 0.336) 100%);
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8c00ff', endColorstr='#02f272', GradientType=1);*/
+	z-index: 100;
+	-webkit-transform: translate3d(0, 0, 0);
+        font-size: 1.2rem;
+        float: right;
+    }
+    .btn1:hover {
+        color: white;
+        transition: 0.4s;
+    }
+    /*formular contact end*/
+    </style>
 </head>
 
 <body>
     
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark container-navbar123" style="background-color: black !important;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><img class="logo-img" src="/assets/imagini/Logo-UT-SC-RGB-RO.png" alt="" srcset=""></a>
+          <a class="navbar-brand" href="#"><img class="logo-img" src="./assets/imagini/Logo-UT-SC-RGB-RO.png" alt="" srcset=""></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -154,7 +361,7 @@
               ↑  
             </p>
         </a>
-<script src="/assets/javasript/buton-top.js"></script>
+<script src="./assets/javasript/buton-top.js"></script>
 	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
     <footer class="footer-principal">
         <div class="fcontainer-principal">
@@ -163,7 +370,7 @@
             </div>
             <div class="frand2">
                 <div class="fcoloana1">
-                    <img class="img-footer" src="/assets/imagini/footer/Media-Digitală-Universitatea-Transilvania.png" alt="">
+                    <img class="img-footer" src="./assets/imagini/footer/Media-Digitală-Universitatea-Transilvania.png" alt="">
                 </div>
                 <div class="fcoloana1">
                     <ul class="footer-ul">
@@ -183,16 +390,16 @@
                 </div>
             </div> 
             <div class="frand3-social-media">
-                <a href=""> <img src="/assets/imagini/social-media/1.png" alt="" srcset=""></a>
-                <a href=""> <img src="/assets/imagini/social-media/2.png" alt="" srcset=""></a>
-                <a href=""> <img src="/assets/imagini/social-media/3.png" alt="" srcset=""></a>
-                <a href=""> <img src="/assets/imagini/social-media/4.png" alt="" srcset=""></a>
+                <a href=""> <img src="./assets/imagini/social-media/1.png" alt="" srcset=""></a>
+                <a href=""> <img src="./assets/imagini/social-media/2.png" alt="" srcset=""></a>
+                <a href=""> <img src="./assets/imagini/social-media/3.png" alt="" srcset=""></a>
+                <a href=""> <img src="./assets/imagini/social-media/4.png" alt="" srcset=""></a>
 
                 
             </div>
         </div>
     </footer>
 </body>
-<script src="/assets/javasript/navbarjavascript.js"></script>
+<script src="./assets/javasript/navbarjavascript.js"></script>
 
 </html>

@@ -44,7 +44,7 @@ overflow: hidden;
 .s1-md-bk {
     height: 100vh;
     width: 98.8vw;
-    background-image: url(/assets/imagini/Header/Media_Digitala_Brasov\ \(5\).jpg);
+    background-image: url(./assets/imagini/Header/Media_Digitala_Brasov\ \(5\).jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -56,7 +56,7 @@ overflow: hidden;
 }
 .buton1 {
     position: relative;
-    background-image: url(/assets/imagini/buton1.svg);
+    background-image: url(./assets/imagini/buton1.svg);
     width: 200px;
     height: 200px;
     display: flex;
@@ -117,7 +117,7 @@ overflow: hidden;
     width: 100%;
     background-color: black;
     padding: 20px 0px;
-    background-image: url(/assets/imagini/imaginiprimapagina/media\ digitală.jpg);
+    background-image: url(./assets/imagini/imaginiprimapagina/media\ digitală.jpg);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
