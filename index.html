@@ -47,7 +47,7 @@ overflow: hidden;
 }
 .s1-md-bk {
     height: 100vh;
-    width: 98.8vw;
+    width: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -391,6 +391,35 @@ z-index: -99999;
 }
 
 /*motive - end*/
+@media (max-width:715px) {
+    .coloana1-sectiunea4-md {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }
+    .subcoloana2-sectiunea4-md {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .subrand1-sectiunea4-md {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .coloana1-sectiunea4-md-invers {
+        width: 100%;
+        display: flex;
+        flex-direction: column !important;
+    }
+    .cmotive-rand p {
+        text-align: center;
+    }
+    .img-motive {
+        display: none;
+    }
+}
     </style>
 </head>
 
