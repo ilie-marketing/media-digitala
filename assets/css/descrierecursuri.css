@@ -1,0 +1,177 @@
+.lumina-neon-stanga {
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 0px;
+    -webkit-box-shadow:0px 0px 105px 45px rgba(255,0,221,0.9);
+    -moz-box-shadow: 0px 0px 105px 45px rgba(255,0,221,0.9);
+    box-shadow: 0px 0px 105px 45px rgba(255,0,221,0.9);
+    z-index: 0;
+}
+
+.lumina-neon-dreapta {
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 0px;
+    -webkit-box-shadow:0px 0px 105px 45px rgba(34,141,255,0.9);
+-moz-box-shadow: 0px 0px 105px 45px rgba(34,141,255,0.9);
+box-shadow: 0px 0px 105px 45px rgba(34,141,255,0.9);
+z-index: 0;
+}
+.sectiunea1-md {
+
+display: flex;
+justify-content: flex-start;
+align-items: center;
+height: 100vh;
+width: 100%;
+background-color: black;
+z-index: 9999;
+overflow: hidden;
+}
+.container-text-header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.container-text-header .container-gol {
+    width: 350px;
+    height: 200px;
+}
+.s1-md-bk {
+    height: 100vh;
+    width: 98.8vw;
+    background-image: url(/assets/imagini/Header/Media_Digitala_Brasov\ \(2\).jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+   
+    
+
+}
+.buton1 {
+    position: relative;
+    background-image: url(/assets/imagini/buton1.svg);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.buton1:hover {
+    color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+
+}
+
+.sectiunea2-md {
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px 0px;
+    background-color: black;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.flex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.container-efect-sticla {
+    max-width: 700px;
+    padding: 20px 20px;
+    text-align: justify;
+    z-index: 1;
+    
+    }
+    .container-efect-sticla h2 {
+        text-align: center;
+    }
+    
+    /*ce vei studia*/
+    .sectiunea3-md {
+        min-height: 100vh;
+        width: 100%;
+        background-color: black;
+        padding: 20px 0px;
+        background-image: url(/assets/imagini/imaginiprimapagina/media\ digitală.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+    .md-rand1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 800px;
+        background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 7px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 15px 10px;
+    height: fit-content;
+    margin: 0 5px;
+    }
+    .md-subrand1 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .md-subrand1 h5 {
+        color: white ;
+    }
+    @media (max-width:460px) {
+        .md-subrand1 {
+            flex-direction: column-reverse;
+        }
+    }
+    .md-coloane-anul1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width:700px ;
+        color: white;
+    }
+    .md-rand1-cu-spatiu {
+        margin-top: 20px;
+    }
+    .md-coloana1 {
+        width: 340px;
+    }
+    .md-coloana2 {
+        width: 340px;
+    }
+    .subcoloana {
+        width: 350px;
+
+    }
+    
+    /*cvs end*/

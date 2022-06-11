@@ -1,0 +1,166 @@
+.lumina-neon-stanga {
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 0px;
+    -webkit-box-shadow:0px 0px 105px 45px rgba(255,0,221,0.9);
+    -moz-box-shadow: 0px 0px 105px 45px rgba(255,0,221,0.9);
+    box-shadow: 0px 0px 105px 45px rgba(255,0,221,0.9);
+    z-index: 0;
+}
+
+.lumina-neon-dreapta {
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 0px;
+    -webkit-box-shadow:0px 0px 105px 45px rgba(34,141,255,0.9);
+-moz-box-shadow: 0px 0px 105px 45px rgba(34,141,255,0.9);
+box-shadow: 0px 0px 105px 45px rgba(34,141,255,0.9);
+z-index: 0;
+}
+.sectiunea1-md {
+
+display: flex;
+justify-content: flex-start;
+align-items: center;
+height: 100vh;
+width: 100%;
+background-color: black;
+z-index: 9999;
+overflow: hidden;
+}
+.container-text-header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.container-text-header .container-gol {
+    width: 350px;
+    height: 200px;
+}
+.s1-md-bk {
+    height: 100vh;
+    width: 98.8vw;
+    background-image: url(/assets/imagini/Header/Media_Digitala_Brasov\ \(4\).jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+   
+    
+
+}
+.buton1 {
+    position: relative;
+    background-image: url(/assets/imagini/buton1.svg);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.buton1:hover {
+    color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+
+}
+
+.sectiunea2-md {
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px 0px;
+    background-color: black;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.flex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+/*Cuprins admitere -start*/
+.container-admitere {
+    max-width: 1000px;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.coloana-admitere-img {
+    position: relative;
+    
+}
+
+.text-headear {
+    position: absolute;
+    right: 0;
+    top: 70px;
+}
+.coloana-admitere ul {
+    list-style: none;
+
+}
+.ul-admitere i {
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.842);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+
+}
+.ul-admitere a {
+    text-decoration: none;
+    color: white;
+}
+.li-admitere1 a {
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    flex-direction: row;
+}
+.li-admitere1 i {
+    margin-left: 20px;
+}
+.li-admitere2 a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-direction: row;
+}
+.li-admitere2 i {
+    margin-right: 20px;
+}
+
+/*Cuprins admitere - end*/
