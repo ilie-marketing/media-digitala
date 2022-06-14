@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Animated Nav With GSAP 3.0</title>
+    <link rel="stylesheet" href="./assets/css/generalstyle.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <style>
+        .lumina-neon-stanga {
+    position: fixed;
+    left: 0;
+    height: 100%;
+    width: 0px;
+    -webkit-box-shadow:0px 0px 105px 45px rgba(255,0,221,0.9);
+    -moz-box-shadow: 0px 0px 105px 45px rgba(255,0,221,0.9);
+    box-shadow: 0px 0px 105px 45px rgba(255,0,221,0.9);
+    z-index: 0;
+}
+
+.lumina-neon-dreapta {
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 0px;
+    -webkit-box-shadow:0px 0px 105px 45px rgba(34,141,255,0.9);
+-moz-box-shadow: 0px 0px 105px 45px rgba(34,141,255,0.9);
+box-shadow: 0px 0px 105px 45px rgba(34,141,255,0.9);
+z-index: 0;
+}
+.sectiunea1-md {
+
+display: flex;
+justify-content: flex-start;
+align-items: center;
+height: 100vh;
+width: 100%;
+background-color: black;
+z-index: 9999;
+overflow: hidden;
+}
+.container-text-header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.container-text-header .container-gol {
+    width: 350px;
+    height: 200px;
+}
+.s1-md-bk {
+    height: 100vh;
+    width: 98.8vw;
+    background-image: url(./assets/imagini/Header/Media_Digitala_Brasov\ \(2\).jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+   
+    
+
+}
+.buton1 {
+    position: relative;
+    background-image: url(./assets/imagini/buton1.svg);
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.buton1:hover {
+    color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #0fa,
+    0 0 82px #0fa,
+    0 0 92px #0fa,
+    0 0 102px #0fa,
+    0 0 151px #0fa;
+
+}
+
+.sectiunea2-md {
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px 0px;
+    background-color: black;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+.flex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.container-efect-sticla {
+    max-width: 700px;
+    padding: 20px 20px;
+    text-align: justify;
+    z-index: 1;
+    
+    }
+    .container-efect-sticla h2 {
+        text-align: center;
+    }
+    
+    /*ce vei studia*/
+    .sectiunea3-md {
+        min-height: 100vh;
+        width: 100%;
+        background-color: black;
+        padding: 20px 0px;
+        background-image: url(./assets/imagini/imaginiprimapagina/media\ digitală.jpg);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow: hidden;
+    }
+    .md-rand1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        max-width: 800px;
+        background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 7px );
+    -webkit-backdrop-filter: blur( 7px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 15px 10px;
+    height: fit-content;
+    margin: 0 5px;
+    }
+    .md-subrand1 {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+    .md-subrand1 h5 {
+        color: white ;
+    }
+    @media (max-width:460px) {
+        .md-subrand1 {
+            flex-direction: column-reverse;
+        }
+    }
+    .md-coloane-anul1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width:700px ;
+        color: white;
+    }
+    .md-rand1-cu-spatiu {
+        margin-top: 20px;
+    }
+    .md-coloana1 {
+        width: 340px;
+    }
+    .md-coloana2 {
+        width: 340px;
+    }
+    .subcoloana {
+        width: 350px;
+
+    }
+    
+    /*cvs end*/
+    @media (max-width:500px) {
+        
+        
+        .lumina-neon-stanga {
+        
+        -webkit-box-shadow:0px 0px 43px 12px rgba(255,0,221,0.9);
+        -moz-box-shadow: 0px 0px 43px 12px rgba(255,0,221,0.9);
+        box-shadow: 0px 0px 43px 12px rgba(255,0,221,0.9);
+        z-index: 0;
+    }
+    
+    .lumina-neon-dreapta {
+        
+        -webkit-box-shadow:0px 0px 43px 12px rgba(34,141,255,0.9);
+    -moz-box-shadow: 0px 0px 43px 12px  rgba(34,141,255,0.9);
+    box-shadow: 0px 0px 43px 12px  rgba(34,141,255,0.9);
+    z-index: 0;
+    }
+    }
+    </style>
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark container-navbar123" style="background-color: black !important;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img class="logo-img" src="./assets/imagini/Logo-UT-SC-RGB-RO.png" alt="" srcset=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse"  id="collapsibleNavbar">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Media Digitală</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Descriere-cursuri.html">Descriere cursuri</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Galerie.html">Galerie</a>
+              </li>   
+              <li class="nav-item">
+                <a class="nav-link" href="Admitere.html">Admitere</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="Intrebari-frecvente.html">Întrebări frecvente</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link" href="Blog.html">Blog</a>
+              </li>   
+              <li class="nav-item">
+                <a class="nav-link" href="Contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="lumina-neon-stanga"></div>
+      <div class="lumina-neon-dreapta"></div>
+	
+    
+        <section class="sectiunea1-md s1-md-bk">
+            
+            <div class="container-text-header">
+                <h1 class="text-headear">Descriere cursuri</h1>
+                <div class="container-gol">
+
+                </div>
+            </div>
+            
+        </section>
+        <section class="sectiunea3-md flex" >
+            <div class="md-rand1">
+                <div class="md-subrand1">
+                    <h3>Fundamentele ale comunicării </h3>
+                    <h5>Anul 1</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        La această disciplină vei învăța ce înseamnă comunicarea, de ce este importantă și ce factori pot duce la o comunicare eficientă sau ce factori pot determina imposibilitatea comunicării. Această disciplină îți va oferi cunoștințe care sunt necesare în orice domeniu de activitate și anume comunicarea cu ființa umană.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Comunicarea în mediul digital </h3>
+                    <h5>Anul 1</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Ai auzit vreo dată de termenul netiquette? Dacă nu, atunci la comunicare în mediul digital vei învăța ce este netiquette-ul  și de ce este important. În plus vei învăța niște tehnici de a comunica mai eficient și mai corect la nivel profesional prin intermediul poștei electronice.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Marketing</h3>
+                    <h5>Anul 1</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Ai simțit vreodată un interes pentru afaceri, vânzări sau de modul în care companiile mari cum ar fi coca cola sau apple au reușit să ajungă în mintea la majoritatea oamenilor? Dacă da, atunci la disciplina marketing vei învăța metodologia prin care aceste companii au reușit să devină atât de cunoscuți în lume.     
+                        <br><br>
+                        În plus, vei învăța că marketingul nu este doar despre a promova ceva ci cuprinde o serie de activități menite să ajute companiile să-și atingă scopurile, cât și pe clienți prin obținerea a ceea ce au nevoie.
+                    </p>
+                </div>
+                
+            </div>
+            
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Etică și deontologie profesională </h3>
+                    <h5>Anul 1</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Profesioniștii se întâlnesc uneori cu situații în care au de ales între a alege o cale mai dificilă, însă corectă sau o cale ușoară, dar greșită din punct de vedere moral și legal. 
+                        <br><br>
+                        Această disciplină îți va dezvolta un simț al eticii și a acționării într-un mod corect atât în viața profesională cât și personală care te va servi într-un mod pozitiv pe tot parcursul vieții.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Introducerea în publicitate </h3>
+<h5>Anul 1</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Ai văzut vreodată o reclamă cu ciocolata Snickers care era ruptă în jumătate și se vedea nucile, ciocolata și caramela din interior? Ți-a făcut poftă? 
+                        Poate ai văzut altă reclamă care te-a făcut să vrei un produs și dacă da, atunci să știi că în spatele la reclama aceea există o știință care este publicitatea. 
+                        La această disciplină vei învăța, de exemplu, că publicitatea abordează perspectiva rațională și emoțională pentru a influența comportamentul audienței.
+                        
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Scriere academică</h3>
+<h5>Anul 1</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        În învățământul superior este esențial să cunoaștem cum să elaborăm lucrări academice bazate pe niște norme, standarde, reguli și principii anume. La cursul scrierea academică vei afla cum să planifici și cum să scrii lucrări academice. Cunoștințele obținute de la această disciplină te va ajuta în carieră și te pot servi în cazul în care vei dori cândva să scrii o carte.
+                        <br><br>
+                        În plus, vei învăța că marketingul nu este doar despre a promova ceva ci cuprinde o serie de activități menite să ajute companiile să-și atingă scopurile, cât și pe clienți prin obținerea a ceea ce au nevoie.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Cultură vizuală</h3>
+<h5>Anul 1</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Arta, expresia artistică, fotografia sunt doar câteva aspecte pe care le vei atinge la cursul cultura vizuală. Cu ajutorul acestei discipline vei crea o legătură cu latura artistică a vizualului care te va ajuta în viitor în ceea ce privește activitățile fotografice, cinematografice sau design grafic.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Introducere în științe politice</h3>
+<h5>Anul 1</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Cursul are menirea să familiarizeze studenții cu științele politice și este important din cel puțin două motive. Primul este faptul că absolvenții de media digitală vor practica meserii, cum ar fi jurnalismul și în care va fi necesar de știut ce sunt științele politice, ce partide există în România, ce oameni politici activează sau care este diferența dintre un partida de stânga și unul de dreapta.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Psihologia utilizatorului de media digitală</h3>
+<h5>Anul 1</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        După studierea disciplinei rețele sociale afla că oamenii, fiind ființe sociale, au legături cu diferite persoane cum ar fi familia, prietenii sau cunoscuții. Suma tuturor legăturilor reprezintă o rețea socială care afectează în
+                        După această disciplină vei înțelege cât sunt de importante legăturile cu oamenii și cum îți pot afecta viața într-un mod pozitiv sau negativ. 
+                    </p>
+                </div>
+                
+            </div>
+           
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Managementul rețelelor sociale</h3>
+<h5>Anul 1</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Fiecare om este guvernat de niște activități psihologice care-i influențează comportamentul. Spre exemplu, te-ai întrebat vreodată cum multe persoane ajung să fie dependente de jocurile video? La cursul psihologia utilizatorului de media digitală vei afla care este motivul. În plus vei învăța și alte lucruri cum ar fi efectele cyberbullying-ului în mediul online și metode de protecție împotriva acestuia. 
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Introducerea în relații publice</h3>
+<h5>Anul 1</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Prin studierea relațiilor publice vei obține cunoștințe și abilități practice legate de comunicarea cu clienții, comunicarea cu media, crearea de comunicate de presă, gestionarea crizelor organizaționale și modalități de comunicare cu jurnaliștii. 
+                    <br><br>
+                    Cu ajutorul acestei discipline vei înțelege importanța prezenței conștientizării organizațiilor atât la nivel de public intern, cum ar fi angajații, cât și la nivel public extern, cum ar fi clienții sau stakeholderii.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Cultura informației</h3>
+<h5>Anul 1</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Crezi că ți-ar plăcea să scrii articole de blog? Poate te interesează mai mult crearea unui script video. Fie că este prima variantă sau a doua, la cursul de tehnici de redactare le vei învăța pe ambele și nu numai. 
+                        Îți va fi ușor să studiezi să asimilezi partea teoretică a cursului și te vei distra pe partea practică elaborând texte de blog, texte pentru reclame și script-uri video.
+                            
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Tehnici de redactare</h3>
+<h5>Anul 1</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        După studierea acestei materii îți vei schimba modul de căutare a informațiilor și modul prin care interpretezi aceste informații. Vei învăța diferite trucuri tehnice prin care să cauți informațiile pe internet într-un mod avansat și vei învăța cât este de important să analizezi conținutul informațional prin 
+                        întrebări cum ar fi: Cine a scris conținutul dat? Cât este de adevărată informația? Care este motivul pentru care autorul a creat conținutul? 
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Metodologia de cercetare în științele comunicării</h3>
+<h5>Anul 1</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Metodologia de cercetare este un curs ajutător studenților pentru a putea cerceta, organiza, analiza și sintetiza materialul de studiu în scopul prodcerii lucrărio științifce, inclusiv lucrări de seminar, lucrări de licență și articole de specialitate.
+                    <br><br>
+                    Cel puțin un lucru pe care o să-l poți face cu ajutorul acestei discpline este să faci cercetări pentru a afla ce fac oamenii la nivel local, național sau internațional, de ce o fac și dacă comportamentul va fi repetat în viitor.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Educația fizică</h3>
+<h5>Anul 1</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Educația fizică este obligatorie, cu posibilitatea de a alege ce sport să fie practicat. Sportul se alege la început de anii de studii din intranet.unitbv.ro, iar câteva sporturi din listă sunt: excursii, basketball, fotbal și fitness. Persoanele cu nevoi speciale pot practica șahul.
+                    <br><br>
+                        Persoanele cu condiții speciale vor putea alege să facă șah.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Limbi străine</h3>
+                     <h5>Anul 1</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Limba străină este o disciplină obligatorie, dar studenților li se oferă posibilitatea să decidă care limbă să o studieze. Este de menționat că studenții vor studia limba străină aleasă în anul 1 și în anul 2.
+                    <br><br>
+                        Studenții pot alege să studieze următoarele limbi: limba engleză, l. franceză, l. germană și l. spaniolă.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Social Media</h3>
+                    <h5>Anul 2</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        În cadrul acestei discipline vei învăța strategii, metode și tehnici de comunicare prin intermediul platformelor de social media. În plus, vei învăța să identifici și să utilizezi limbajul, metodologiile și cunoștințele de specialitate din domeniul științelor comunicării și aplicarea tehnicilor de muncă eficientă în echipe multidisciplinare.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Producție media digitală</h3>
+<h5>Anul 2</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Producția media digitală o disciplină importantă în planul de învățământ al specialității media digitală, deoarece este despre înțelegerea teoriei în spatele creării imaginilor digitale, clipurilor video, fișierelor audio și cum să le editezi conform dorințelor tale.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Tehnici creative</h3>
+                    <h5>Anul 2</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        La cursul tehnici creative în elaborarea produselor de relații publice vei învăța cum să identifici și să utilizezi strategii, metode și tehnici de comunicare în procesul de relații publice. Cum să realizezi și cum să promovezi un produs de relații publice.
+                        <br><br>
+                        Vei învăța fundamentele creativității ca proces, creativitatea ca aptitudine și despre diferiți factori care inhibă creativitatea. Vei învăța tehnici pentru creșterea creativității atât la nivel individual, cât și de grup.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Sistemul mass-media</h3>
+                    <h5>Anul 2</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Mass-media este o disciplină foarte interesantă deoarece te învață să identifici și să înțelegi teorii legate de gestionarea informațiilor, comunicare mediatică și efectele comunicării mediatice.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Branding digital</h3>
+<h5>Anul 2</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Brandingul înglobează toate percepțiile și experiențele pe care le au clienții cu un brand. Este personalitatea și valorile pe care le are compania sau profesionistul.
+                        <br><br>
+                        La disciplina dată vei învăța despre importanța brandingului în contextul comunicării digitale, cum să alegi elementele mărcii, ce înseamnă capital de brand, cum să construiești o identitate de brand în mediu online, cum să poziționez un brand, cum să faci digital brand storytelling etc. 
+                        La finalul cursului vei ști cum poți dezvolta un brand pentru o companie sau cum să-ți dezvolți propriul tău brand. 
+
+                    </p>
+                </div>
+                
+            </div>
+           
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Cercetarea cantitativă în mediul online</h3>
+                    <h5>Anul 2</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Scopul cursului este de a învăța studenții să planifice, să creez, să administreze și să analizeze o cercetare cantitativă administrată în mediul online.
+                        <br><br>
+                        Vei învăța cum se poate de administrat un chestionar la mai multe persoane prin diferite canale cum ar fi email sau Facebook ads.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Editare TV</h3>
+                    <h5>Anul 2</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Editare TV este o disciplină menite să ofere studenților cunoștințe teoretice legate despre televiziune și strategii editoriale. Vei învăța care sunt încadraturile de cinematografie, care sunt standardele TV și ce tipuri de mișcări pot fi făcute cu camera.
+                        <br><br>
+                        Tipurile de știri și etapele de montaj sunt alte aspecte teoretice pe care le vei învăța. În plus, vei obține abilități practice legate de editarea clipurilor video conform standardelor jurnalistice.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Design grafic</h3>
+                    <h5>Anul 2</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        După finalizarea cursului vei obține cunoștințe și experiența de a executa în mod eficient proiecte din sfera designului grafic atât la nivel tehnic cât și conceptual. 
+                        <br><br>
+                        În final, vei putea fundamenta o viziune cultural-artistică asupra fenomenului de promovare media.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Educația fizică</h3>
+                    <h5>Anul 2</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Educația fizică este obligatorie, cu posibilitatea de a alege ce sport să fie practicat. Sportul se alege la început de anii de studii din intranet.unitbv.ro, iar câteva sporturi din listă sunt: excursii, basketball, fotbal și fitness. Persoanele cu nevoi speciale pot practica șahul.
+                    <br><br>
+                        Persoanele cu condiții speciale vor putea alege să facă șah.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Discipline opționale:</h3>
+                    <h5>Anul 2</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <div class="subcoloana">
+                        <ul>
+                            <li>Sisteme de arhivare a documentelor </li>
+                            <li>Managementul depozitelor digitale</li>
+                            <li>Optimizare și marketing în motoarele de căutare (SEO și SEM)</li>
+                            <li>Securitatea cibernetică</li>
+                            <li>Protecția proprietății intelectuale</li>
+                            <li>Aspecte legale ale producției media publicate pe internet</li>
+                            <li>Campanii de relații publice</li>
+
+                        </ul>
+                    </div>
+                    <div class="subcoloana subcoloanpading">
+                        <ul>
+                            <li>Comunicare interculturală</li>
+                            <li>Tehnici de analiză în interpretare a imaginilor</li>
+                            <li>Globalizarea media</li>
+                            <li>Fotografie digitală</li>
+                            <li>Ilustrație muzicală</li>
+                            <li>Animație și efecte vizuale</li>
+
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Sisteme de comunicații digitale</h3>
+                    <h5>Anul 3</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Cursul are legătură cu rețelele de telecomunicații fixe și mobile. Vei învăța care sunt caracteristicile rețelelor fixe digitale și a rețelei GSM. Te familiariza cu rețeaua GPRS, cu noțiunile despre 3G, 4G, Wifi și Bluetooth.   
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Fake news</h3>
+<h5>Anul 3</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Fake news este o disciplină necesară nu doar pentru activitatea profesională a studenților, ci și pentru viața lor personală. O persoană neinformată sau o persoană informată greșit este una care poate fi manipulată. Mai rău este să faci o decizie în baza unor informații false care mai târziu îți poate costa sănătatea sau bunăstarea financiară.
+                        <br><br>
+                        Fake news sau știrile false au existat și în trecut, dar în prezent are cel mai destructiv efect, deoarece are potențialul să se transmită foarte rapid la nivel local, național și internațional.
+                        <br><br>
+                        La acest curs vei obține cunoștințe teoretice legate de fake news și vei dobândi abilități practice în vedere analizării informațiilor existente într-o știre pentru a înțelege dacă este adevărată sau falsă.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Tehnici calitative de cercetare online</h3>
+                    <h5>Anul 3</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Cercetarea calitativă este despre analiza conținutului de tip text, imagine, video sau audio cu scopul de a descrie cum este un lucru sau de ce este așa. 
+                        La disciplina dată vei învăța să faci aceste lucruri în mediul online și în final te vei alegi cu abilitatea de a vedea în imagini sau text ceea ce nu văd persoanele obișnuite.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Planificare media</h3>
+                    <h5>Anul 3</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Planificarea, crearea, plasarea și promovarea mesajelor publicitare prin intermediul diferitelor canale este ceea ce înglobează esența acestui curs. Vei învăța despre lucrurile care trebuie luate în vedere în procesul de planificare cum ar fi identificarea locației în care să se realizez filmarea, negocierea cu autoritățile locale sau cu proprietarul locației pentru a obține acces.
+                        <br><br>
+                        Pregătirea unui plan B în caz că ceva nu merge bine cu planul inițial pentru a evita pierderi financiare. 
+                        <br><br>
+                        Pe partea practică vei crea clipuri video care să aibă niște obiective concrete cum ar fi informarea sau creșterea vânzărilor a unui produs sau serviciu.
+
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Web-design</h3>
+<h5>Anul 3</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        Web design este un curs care are la bază teorii din tehnologia informațională și poate fi un pic dificil pentru cei care au învățat mai mult lucruri umanistice, dar dacă o să ai încredere în profesor și vei fi atent, atunci vei vedea că este ușor.
+                        <br><br>
+                        Aceste fluturașe promoționale sunt create de graficieni și mai apoi sunt trimise la tipgografii, iar acolo sunt editate și aranjate în pagină conform unei metodologii anume pentru a obține o printare calitativă și eficientă din punct de vedere a cheltuielilor.  
+                        <br><br>
+                        După acest curs vei ști și tu cum să pregătești corect lucrările grafice pentru a fi printate la tipografii.
+                    </p>
+                </div>
+                
+            </div>
+           
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Sisteme digitale de tipărire</h3>
+                    <h5>Anul 3</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        În cadrul acestui curs vei învăța fundamentele managementul proiectelor și vei obține abilități practice legate de modul de gestionare eficientă a acestora.
+                        Dacă ai auzit vreodată de firme comerciale sau organizații non-profit care au obținut finanțări nerambursabile pentru a realiza un proiect, atunci să știi că acestea au reușit, deoarece au știut cum să se organizeze corecte pe parte managementului proiectelor.
+                        <br><br>
+                    </p>
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Discipline opționale:</h3>
+                    <h5>Anul 3</h5>
+                </div>
+                <div class="md-coloane-anul1 subcoloanadiv">
+                    <div class="subcoloana">
+                        <ul>
+                            <li>Comunicare în situații de criză</li>
+                            <li>Comunicare cu presa online</li>
+                            <li>Reportaj social</li>
+                            <li>Gen și mass media</li>
+
+                        </ul>
+                    </div>
+                    <div class="subcoloana">
+                        <ul>
+                            <li>Realitatea virtuală</li>
+                            <li>Procesare sunet</li>
+                            <li>Analiza lumilor digitale</li>
+                            <li>Antropologia digitală</li>
+
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="md-rand1 md-rand1-cu-spatiu">
+                <div class="md-subrand1">
+                    <h3>Design grafic</h3>
+                    <h5>Anul 3</h5>
+                </div>
+                <div class="md-coloane-anul1">
+                    <p>
+                        După finalizarea cursului vei obține cunoștințe și experiența de a executa în mod eficient proiecte din sfera designului grafic atât la nivel tehnic cât și conceptual. 
+                        <br><br>
+                        În final, vei putea fundamenta o viziune cultural-artistică asupra fenomenului de promovare media.
+                    </p>
+                </div>
+                
+            </div>
+        </section>
+            
+      
+        <a href="#" id="buton-navigare">
+            ↑
+        </a>
+<script src="./assets/javasript/buton-top.js"></script>
+	<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+    <footer class="footer-principal">
+        <div class="fcontainer-principal">
+            <div class="frand1">
+                <h3>Linku-uri utile</h3>
+            </div>
+            <div class="frand2">
+                <div class="fcoloana1">
+                    <img class="img-footer" src="./assets/imagini/footer/Media-Digitală-Universitatea-Transilvania.png" alt="">
+                </div>
+                <div class="fcoloana1">
+                    <ul class="footer-ul">
+                        <li class="footer-li"><a class="footer-a" href="">Site-ul Univesității</a></li>
+                        <li class="footer-li"><a class="footer-a" href="">Site-ul facultății de sociologie</a></li>
+                        <li class="footer-li"><a class="footer-a" href="https://admitere.unitbv.ro/images/Metodologia_de_admitere_09.02.2022.pdf">Metodologia admiterii</a></li>
+                        <li class="footer-li"><a class="footer-a" href="https://www.unitbv.ro/documente/Studenti/ghid_22.pdf">Ghid începere studii</a></li>
+                        <li class="footer-li"><a class="footer-a" href="">Servicii clienți</a></li>
+                    </ul>
+                </div>
+                <div class="fcoloana1">
+                    <ul class="footer-ul">
+                        <li class="footer-li"><a class="footer-a" href="">Politica de confiențialitate</a></li>
+                        <li class="footer-li"><a class="footer-a" href="">Termeni și condiții</a></li>
+                        <li class="footer-li"><a class="footer-a" href="">Politica Cookies</a></li>
+                    </ul>
+                </div>
+            </div> 
+            <div class="frand3-social-media">
+                <a href=""> <img src="./assets/imagini/social-media/1.png" alt="" srcset=""></a>
+                <a href=""> <img src="./assets/imagini/social-media/2.png" alt="" srcset=""></a>
+                <a href=""> <img src="./assets/imagini/social-media/3.png" alt="" srcset=""></a>
+                <a href=""> <img src="./assets/imagini/social-media/4.png" alt="" srcset=""></a>
+
+                
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="./assets/javasript/navbarjavascript.js"></script>
+
+</html>
