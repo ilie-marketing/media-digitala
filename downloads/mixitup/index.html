@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Multiple Instances, Different Controls</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="controls">
+  
+  <button class="filter-1" data-filter="all">Toți anii</button>
+  <button class="filter-1" data-filter=".category-1">Anul 1</button>
+  <button class="filter-1 active" data-filter=".category-2">Anul 2</button>
+  <button class="filter-1 active" data-filter=".category-2">Anul 3</button>
+  
+  <label>Aranjează:</label>
+  
+  <button class="sort-1" data-sort="myorder:asc">Asc</button>
+  <button class="sort-1" data-sort="myorder:desc">Desc</button>
+</div>
+<div class="container" id="MixItUp1">
+  <div class="mix category-1" data-myorder="1"></div>
+  <div class="mix category-1" data-myorder="2"></div>
+  <div class="mix category-1" data-myorder="3"></div>
+  
+  <div class="gap"></div>
+  <div class="gap"></div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mixitup/2.1.11/jquery.mixitup.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
